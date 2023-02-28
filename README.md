@@ -10,5 +10,5 @@ I solved problems A, E, F, and J in the actual contest.
 [Problem D: Counting Pythagorean Triples](/solutions/pythagorean.py)  
 [Problem E: Cannolis](/solutions/cannolis.py)  
 [Problem F: Busy As a Bee](/solutions/honeycomb.py)  
-[Problem I: Caravan Trip Plans](/solutions/cravan.py)  
+[Problem I: Caravan Trip Plans](/solutions/caravan.py)  
 [Problem J: PSET](/solutions/pset.py)  
