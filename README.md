@@ -8,4 +8,5 @@ I solved problems A, E, F, and J in the actual contest.
 [Problem A: Cornhole](/solutions/cornhole.py)  
 [Problem B: Sum of Remainders](/solutions/remainders.py)  
 [Problem E: Cannolis](/solutions/cannolis.py)  
+[Problem F: Busy As a Bee](/solutions/honeycomb.py)  
 [Problem J: PSET](/solutions/pset.py)  
