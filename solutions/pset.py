@@ -6,7 +6,7 @@ def flip(i, j, k):
 
 # 3 cards are SET if they all have the same property or the different properties
 # x, y, z: one side of a card
-# l: a property; count, color, fill, shape for each letters in a card
+# l: index to represent a property; count, color, fill, shape for each letters in a card
 def is_set(x, y, z):
     for l in {0, 1, 2, 3}:
         if x[l] == y[l] == z[l]:
@@ -19,9 +19,9 @@ def is_set(x, y, z):
 # a, b, c: one card
 # combinations of 3 cards' sides are 000, 001, 010, 011, 100, 101, 110, 111
 # when flipped, 100 -> 011, 101 -> 010, 110 -> 001, 111 -> 000, so these do not need to be gone through
-# when is_PSET() found PSET, it ends for-loop and returns 1
-# else, is_PSET() returns 0
-def is_pset(a, b, c):
+# when pset() found PSET, it ends for-loop and returns 1
+# else, pset() returns 0
+def pset(a, b, c):
     comb = [[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 1]]
     for [i, j, k] in comb:
         if is_set(a[i], b[j], c[k]):
@@ -30,16 +30,17 @@ def is_pset(a, b, c):
                 return 1
     return 0
 
-# n: number of cards
-n = int(input())
-# ans: number of PSET pairs
-ans = 0
-# cards: lists(top/bottom card) in list
-cards = []
+
+# main
+
+n = int(input())    # n: number of cards
+ans = 0             # ans: number of PSET pairs
+cards = []          # cards: lists(top&bottom sides of card) in list
 for i in range(n):
     cards.append(input().split())
 
 for a, b, c in it.combinations(range(n), 3):
-    ans += is_pset(cards[a], cards[b], cards[c])
+    # pick 3 cards
+    ans += pset(cards[a], cards[b], cards[c])
 
 print(ans)
